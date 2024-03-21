@@ -11,9 +11,13 @@
 \usepackage{enumitem} % enumerate with [resume] option
 \usepackage{titlesec} % allow custom section fonts
 \usepackage{setspace} % custom line spacing
-\usepackage[maxcitenames=6, minnames=3 ]{biblatex}
+\usepackage{xcolor} 
+\usepackage[maxcitenames=10, maxbibnames=10]{biblatex}
 \addbibresource[]{biblio.bib}
 
+\AtEveryCite{\DeclareNameAlias{author}{given-family}}
+  
+  
 % bold the name of specific author
 \usepackage{xstring}
 \usepackage{etoolbox}
@@ -34,17 +38,21 @@
     {\addcomma\space}{}
   }
 }
-\makeauthorsbold{Luo, Zhirui}
+
+
+
+
+\makeauthorsbold{Wen, Zhiyuan}
 
 % what is your name?
-\newcommand{\myname}{Zhirui Luo}
+\newcommand{\myname}{Zhiyuan Wen}
 
 % select default typefaces
 \usepackage{ebgaramond} % document's serif typeface
 \usepackage{tgheros}    % document's sans serif typeface
 
 % how far to tab for list items with left-aligned date: different fonts need different widths
-\newcommand{\listtabwidth}{1.7cm}
+\newcommand{\listtabwidth}{4cm}
 
 % define font to use as document's title
 \newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
@@ -59,18 +67,18 @@
 \titlespacing{\subsection}{0pt}{16pt plus 4pt minus 4pt}{4pt plus 2pt minus 2pt}
 
 % set page margins (assumes letter paper)
-\geometry{body={6.5in, 9.0in},
-    left=1.0in,
+\geometry{body={7.2in, 9.0in},
+    left=0.8in,
     top=1.0in}
 
 % prevent paragraph indentation
 \setlength\parindent{0em}
 
 % set line spacing
-\setstretch{0.9}
+\setstretch{1.2}
 
 % define space between list items
-\newcommand{\listitemspace}{0.25em}
+\newcommand{\listitemspace}{0.5em}
 
 % make unordered lists without bullets and use compact spacing
 \renewenvironment{itemize}
@@ -99,7 +107,7 @@
     colorlinks  = true,
     urlcolor    = black,
     citecolor   = black,
-    linkcolor   = black,
+    linkcolor   = blue,
     pdfauthor   = {\myname},
     pdfkeywords = {Deep Learning, Machine Learning, Smart Meter ,Social Computation},
     pdftitle    = {\myname: Curriculum Vitae},
@@ -116,119 +124,100 @@
 
     % affiliation and contact info blocks
     \vspace{1em}
-    \begin{minipage}[t]{0.700\textwidth}
+    \begin{minipage}[t]{0.670\textwidth}
         % current primary affiliation, left-aligned
-        Department of Computer Science and Engineering (CSE)\\
-        New Mexico Institute of Mining and Technology
+        Postdoctoral Fellow, working with \href{https://www4.comp.polyu.edu.hk/~csjcao/}{\textcolor{blue}{Prof. Jiannong Cao}}\\
+        Department of Computing\\
+        The Hong Kong Polytechnic University (PolyU)
     \end{minipage}
-    \begin{minipage}[t]{0.295\textwidth}
+    \begin{minipage}[t]{0.325\textwidth}
         % contact info details, right-aligned
         \flushright{}
-        \href{mailto:zhirluo@gmail.com}{zhirluo@gmail.com} \\
-        +1 575 418 0064 \\
-        \href{https://zhiruiluo.github.io}{zhiruiluo.github.io}\\
-        \href{https://orcid.org/0000-0002-3121-2597}{orcid:0000-0002-3121-2597}
+        Phone: +852 5960 2238\\
+        Email: \href{mailto:zyuanwen@polyu.edu.hk}{\textcolor{blue}{zyuanwen@polyu.edu.hk}} \\
+        Homepage: \href{https://preke.github.io}{\textcolor{blue}{preke.github.io}}\\
     \end{minipage}
 
-    \section*{Education}
+    \section*{Educational Background}
     
     \begin{tablist}
-      \item[Ph.D.] \tab{}CSE, New Mexico Institute of Mining and Technology, Socorro, USA, 2020-2023
-      \item[M.S.] \tab{}CSE, New Mexico Institute of Mining and Technology, Socorro, USA, 2018-2020
-      \item[B.S.] \tab{}CSE, New Mexico Institute of Mining and Technology, Socorro, USA, 2015-2017
-      \item[B.E.] \tab{}Software Engineering, Yangtze University, Jingzhou, China, 2012-2015
+      \item[2018.9-2023.12] \tab{}Ph.D. in Computer Science, The Hong Kong Polytechnic University, Hong Kong, China\\
+      		Thesis: Comprehending and Reflecting Personality in Dialog Systems \\
+      		Supervisor: \href{https://www4.comp.polyu.edu.hk/~csjcao/}{\textcolor{blue}{Prof. Jiannong Cao}}, IEEE Fellow \\
+      \item[2021.9-2022.3] \tab{}Visiting Student at \href{https://nlp.csai.tsinghua.edu.cn/}{\textcolor{blue}{THUNLP}} Lab, Tsinghua University, Beijing, China\\
+	      Supervisor: \href{https://nlp.csai.tsinghua.edu.cn/staff/sms/}{\textcolor{blue}{Prof. Maosong Sun}}, ACL Fellow \\
+      \item[2013.9-2017.6] \tab{}B.E. on Information Security, Sun Yat-sen University (SYSU), Guangzhou, China 
     \end{tablist}
     
-    \section*{Research Areas}
+    \section*{Research Interests}
     \begin{itemize}
-      \item Smart meter: building occupancy detection, socio-demographic info identification, energy theft detection, and load monitoring
-      \item Neural Architecture Search (NAS): multi-objective genetic algorithm, Bayesian optimization
-      \item Social computation: multi-modal language model method for rumor detection on social media
-      \item Computer Vision: plant leaf diseases detection and neural adversarial attack \& detection
-      \item Biomedical signal: sEMG-based hand gesture recognition and user authentication, EEG-based driving fatigue detection
+      \item Conversational AI, Personality and Emotion in Dialog Systems, Summarization, Large Language Models
     \end{itemize}
     
     \section*{Publications}
     \subsection*{Journal Articles}
     \begin{tablist}
-        \item[2023] \tab{}\fullcite{qi2023deepsmi}
-        \item[2023] \tab{}\fullcite{li2023deeptpa}
-        \item[2022] \tab{}\fullcite{li2022new}
-        \item[2022] \tab{}\fullcite{qi2022novel} 
-        \item[2021] \tab{}\fullcite{luo2021deep}
-        \item[2021] \tab{}\fullcite{luo2021study}
-        \item[2018] \tab{}\fullcite{zamani2018patterns}
-        \item[2015] \tab{}\fullcite{li2015research}
-    \end{tablist}
-
+    	\item[TOIS] \tab{}\fullcite{wen2024person}
+    	\item[TKDE] \tab{}\fullcite{liu2023neural}
+        \item[IP\&M] \tab{}\fullcite{wen2023desprompt}
+        \item[IP\&M] \tab{}\fullcite{liu2022key}
+        \item[WWWJ] \tab{}\fullcite{yang2022automated}
+        \item[TSE] \tab{}\fullcite{gao2021emerging}
+        \item[TNNLS] \tab{}\fullcite{ye2019homophily}
+	\end{tablist}
     \subsection*{Conference Proceedings}
     \begin{tablist}
-        \item[2022] \tab{}\fullcite{luo2022abode-net}
-        \item[2021] \tab{}\fullcite{li2021deep}
+    	\item[PerCom' 24] \tab{}\fullcite{wen2024affective}
+    	\item[EMNLP' 22(Findings)] \tab{}\fullcite{liu2022long}
+        \item[IJCAI' 22] \tab{}\fullcite{liu2023generating}
+        \item[ACL' 21(Findings)] \tab{}\fullcite{wen2021automatically}
+        \item[ACL' 21(Findings)] \tab{}\fullcite{liu2021highlight}
+        \item[DASFAA' 20(Findings)] \tab{}\fullcite{yang2020epars}
+        \item[EMNLP' 20(Findings)] \tab{}\fullcite{yang2020enhancing}
+        \item[ICBL' 20] \tab{}\fullcite{yang2020learning}
+        \item[LREC'20] \tab{}\fullcite{wen2020decode}
+        \item[LREC'20] \tab{}\fullcite{yang2020ggp}
+        \item[APSEC' 18] \tab{}\fullcite{xie2018detecting}
     \end{tablist}
 
     % \section*{INVITED TALKS}
     % \subsection*{Campus Talks}
 
-    \section*{Conference Activity}
+    \section*{Awards and Honors}
     \begin{tablist}
-        \item[2022] \tab{}The 7th International Conference on Smart Computing and Communication (SmartCom 2022), New York, USA
-        \item[2022] \tab{}NSF EPSCoR Workshop on Artificial Intelligence \& No-Boundary Thinking, Little Rock, Arkansa
-    \end{tablist}
-
-    \section*{Awards}
-    \subsection*{Awards and Honors}
-    \begin{tablist}
-        \item[2022] \tab{}Best Student Paper Award, SmartCom2022
-        \item[2022] \tab{}First Place Graduate Poster Award, New Mexico Research Symposium (NMRS)
-        \item[2022] \tab{}First Place Poster Winner, NM SMART Grid Center All Hands Meeting
-        \item[2022] \tab{}Second Place Graduate Poster Award, NMT Student Research Symposium
+        \item[2023] \tab{}Best Presentation Award at PolyU Research Student Conference 
     \end{tablist}
 
     \section*{Teaching}
     \begin{tablist}
-        \item[2022 Summer] \tab{}Introductory-level Python course, Upward Bound Math and Science
-        \item[2020-2022] \tab{}Compiler Writing Lab
-        \item[2018-2022] \tab{}Teaching Assistant: Computer Network, Operating System, 
+        \item[2024 Spring] \tab{}Guest Lecturer, Data Analysis based on Text Inputs 2 (\href{https://preke.github.io/files/COMP5152-Lecture\%209.pdf}{\textcolor{blue}{Slide}}),\\ COMP 5152: Advanced Data Analytics, PolyU
+        \item[2021 Spring] \tab{}Teaching Assistant, COMP4146: Computational Finance, PolyU
+        \item[2020 Spring] \tab{}Teaching Assistant, COMP1011: Programming Fundamentals, PolyU
+        \item[2019 Spring] \tab{}Teaching Assistant, COMP4133: Information Retrieval, PolyU
+        \item[2018,19,20 Fall] \tab{}Teaching Assistant, COMP3011: Design and Analysis of Algorithms, PolyU
+        
     \end{tablist}
 
     \section*{Service}
     \subsection*{Academic Journal and Conference Peer Review}
     \begin{itemize}
-        \item IEEE Wireless Communications and Networking Conference (WCNC)
-        \item Scientific Reports
-        \item Knowledge-Based Systems
-        \item PeerJ Computer Science
-        \item Journal of King Saud University - Computer and Information Sciences 
-        \item The 36th ACM/SIGAPP Symposium On Applied Computing
+        \item ACL, EMNLP, NAACL, IJCAI'19, AAAI'19, BigData'19
+        \item ACM Computing Surveys
+        \item Information Processing and Mangement
     \end{itemize}
 
-    \section*{Research Labs and Assistantship}
+    \section*{Internship}
     \begin{tablist}
-        \item[2020-Now] \tab{}Research assistant at Human-Centered Computing and Security Lab, NMT
-        \item[2019-2021] \tab{}Graduate Assistant for REU in Cybersecurity, NMT
-        \item[2018-2020] \tab{}Research assistant at Sensor Security, Neural Network Lab, NMT
-        \item[2017 Summer] \tab{}Research assistant on optimization of twice-differetiable non-convex function
-        \item[2016-2017] \tab{}Robotics Lab Research, NMT
-    \end{tablist}
-
-    \section*{Certificates}
-    \begin{tablist}
-        % \item[2022] \tab{}Graduate Certificate in Cybersecurity
-        \item[2022] \tab{}Intel AI Analytics Toolkit Workshop
-        \item[2014] \tab{}IBM Academic Initiative Senior Software Development Engineer
-    \end{tablist}
-
-    \section*{Professional Employment}
-    \begin{tablist}
-        \item[2018] \tab{}C++ Development, Zhejiang Guozi Robotics, Hangzhou, China
+        \item[2016.9-2017.12] \tab{}Research assistant at \href{https://inpluslab.com/}{\textcolor{blue}{InplusLab}}, SYSU, Guangzhou, China \\ Supervisor: \href{https://www.zibinzheng.com/}{\textcolor{blue}{Prof. Zibin Zheng}}, IEEE Fellow
+        \item[2018.1-2018.5] \tab{}R \& D Intern in Reliability Group, 2012 Lab, Huawei, Shenzhen, China \\ Mentor: \href{https://jiemingzhu.github.io/}{\textcolor{blue}{Dr. Jieming Zhu}}
+        \item[2017.4-2017.9] \tab{}Research Student in Weixin Group, Tencent, Guangzhou, China
     \end{tablist}
 
     \section*{Skills}
     \begin{tablist}
         \item[Programming] \tab{}Python, C/C++, C\#, Java, JS, LaTex, Matlab
-        \item[Web] \tab{}\tab{}Flask, Bootstrap
-        \item[Deep Learning] \tab{}PyTorch, TensorFlow
+        \item[Web] \tab{}Django, Flask, Bootstrap
+        \item[Deep Learning] \tab{}PyTorch
     \end{tablist}
 
 \end{document}
